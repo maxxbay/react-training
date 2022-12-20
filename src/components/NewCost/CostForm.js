@@ -62,7 +62,7 @@ const CostForm = props => {
     e.preventDefault();
 
     const costData = {
-      name: name,
+      description: name,
       amount: amount,
       date: new Date(date),
     };
@@ -100,6 +100,9 @@ const CostForm = props => {
         </div>
         <div className="new-cost__actions">
           <button type="submit">Enter expense value</button>
+          <button type="button" onClick={props.onCancel}>
+            Reset expense value
+          </button>
         </div>
       </div>
     </form>
